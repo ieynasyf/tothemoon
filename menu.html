@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <style>
+    body {
+      font-family: Poppins;
+      margin: 0;
+      padding: 0;
+      background-color: #17232A;
+      color: #fff;
+    }
+
+    header {
+      background-color: #transparent;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    header nav a:hover {
+      background-color: transparent;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 100px auto 0; /* Adjusted for fixed header */
+      padding: 20px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .menu-item h3 {
+      margin: 15px 0 10px;
+      font-size: 18px;
+    }
+
+    .menu-item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .menu-item .price {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #000;
+    }
+
+    .menu-item button {
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .menu-item button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="#Main Course-section">Main Course</a>
+      <a href="#Dessert-section">Dessert</a>
+      <a href="#Coffe-section">Coffee</a>
+      <a href="#Non-Coffe-section">Non-Coffee</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="title">
+      <h1>Menu</h1>
+    </div>
+    
+    <!-- Main Course Section -->
+    <div class="section" id="Main Course-section">
+      <h2>MAIN COURSE</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="image/bolognese.jpg" alt="Pasta Bolognese">
+          <h3>Pasta Beef Bolognese</h3>
+          <p>The taste of a sour fresh tomato with sprinkle parmesen cheese</p>
+          <div class="price">RM 18.00 </div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/carbonara.jpg" alt="Pasta Carbonara">
+          <h3>Pasta Carbonara Cheesy </h3>
+          <p>More to creamy taste, with rich of cheese taste little bit of smoky</p>
+          <div class="price">RM 15.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/tomyam.jpg" alt="Pasta Tomyam Creamy">
+          <h3>Pasta Creamy Tomyam</h3>
+          <p>Combines spicy, tangy and creamy flavours and aromatic</p>
+          <div class="price">RM 19.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/aglio olio.jpg" alt="Agli Olio">
+          <h3>Pasta Aglio Olio</h3>
+          <p>Simply garlicky, and lightly spicy with olive oil richness</p>
+          <div class="price">RM 16.00 </div>
+          <button>Add to Cart</button>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Dessert Section -->
+    <div class="section" id="Dessert-section">
+      <h2>DESSERT</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="image/cake 1.jpg" alt="Strawberry CheeseCake">
+          <h3> Strawberry CheeseCake</h3>
+          <p>Buttery crust with fresh strawberry falvor</p>
+          <div class="price">RM 13.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/carrot.jpg" alt="Carrot Cake">
+          <h3>Carrot Cake</h3>
+          <p> Slightly sweet with little bit taste of cinamon and moist</p>
+          <div class="price">RM 9.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/cake 4.jpg" alt="Burnt Cheesecake">
+          <h3>Burnt Cheesecake</h3>
+          <p>Slightly bitter crust with creamy taste and caramalized</p>
+          <div class="price">RM 15.00</div>
+          <button>Add to Cart</button>
+        </div>
+	 <div class="menu-item">
+          <img src="image/cake 2.jpg" alt="Moist Chocolate Cake">
+          <h3>Moist Chocolate Cake</h3>
+          <p>Rich with chocolate, moist and sweet with deep cocoa flavor</p>
+          <div class="price">RM 12.00 </div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+     </div>
+
+  <!-- Coffee Section -->
+    <div class="section" id="Coffe-section">
+      <h2>COFFE</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="image/caramel.jpg" alt="Caramel Latte">
+          <h3>Caramel Latte</h3>
+          <p>Coffe flavor balanced by caramel surgary richness</p>
+          <div class="price">RM 13.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/whitemocha.jpg" alt="White Mocha">
+          <h3>White Mocha</h3>
+          <p>White chocolate syrup, offering a rich smooth flavork</p>
+          <div class="price">RM 12.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/machiatto.jpg" alt="Macchiato">
+          <h3>Macchiato</h3>
+          <p>strong espresso with small amount steamed milk slightly coffee tatse</p>
+          <div class="price">RM 13.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/americano.jpg" alt="Americano">
+          <h3>Americano</h3>
+          <p>simple bold coffe, less intense flavor</p>
+          <div class="price">RM 6.00</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+ <!-- Non-Coffee -->
+    <div class="section" id="Non-Coffe-section">
+      <h2>NON COFFE</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="image/strawberry.jpg" alt="Strawberry Creamy Milk">
+          <h3>Strawberry Creamy Milk</h3>
+          <p>Fruity with a smooth, refreshing strawberry flavor</p>
+          <div class="price">RM 8.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/icedmatcha.jpg" alt="Matcha Latte">
+          <h3>Matcha Latte</h3>
+          <p>Creamy and thick of matcha flavor</p>
+          <div class="price">RM 13.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/chocolate.jpg" alt="Frappe Chocolate">
+          <h3>Chocolate Frappe</h3>
+          <p>Deep chocolate taste blend with creamy milk</p>
+          <div class="price">RM 9.00</div>
+          <button>Add to Cart</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/matcha.jpg" alt="Matcha Strawberry">
+          <h3>Matcha Strawberry</h3>
+          <p>Slighlt bitter matcha with tangy taste fresh strawberry</p>
+          <div class="price">RM 15.00</div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

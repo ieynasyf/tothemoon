@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profile</title>
+    <style>
+        body {
+            font-family: Poppins;
+            background-color: #17232A;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member .info {
+            padding: 15px;
+        }
+
+        .team-member .info h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .team-member .info p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .team-member .social-media {
+            margin-top: 10px;
+        }
+
+        .team-member .social-media a {
+            margin: 0 10px;
+            font-size: 18px;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .team-member .social-media a:hover {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Meet Our Team</h1>
+    </header>
+
+    <div class="team-container">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="image/dina.jpeg" alt="Team Member 1">
+            <div class="info">
+                <h3>Irdina</h3>
+                <p>Cafe Manager</p>
+                <div class="social-media">
+                    <a href="https://wa.me/60179546054/"_blank">Whatsaap</a>
+                    <a href="https://www.instagram.com/dieynazman_/profilecard/?igsh=MXZ0bnZnODI4MWI1Ng==/"_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member">
+            <img src="image/asya.jpeg" alt="Team Member 2">
+            <div class="info">
+                <h3>Asya</h3>
+                <p>Chef</p>
+                <div class="social-media">
+                    <a href="https://wa.me/60179282805/"_blank">Whatsaap</a>
+                    <a href="https://www.instagram.com/asyaridhuan?igsh=MW5ja2ZtNXN2ZHQwYg%3D%3D&utm_source=qr"_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-member">
+            <img src="image/mira.jpeg" alt="Team Member 3">
+            <div class="info">
+                <h3>Amiera</h3>
+                <p>Supervisor</p>
+                <div class="social-media">
+                    <a href="https://wa.me/60196376077/"_blank">Whatsaap</a>
+                    <a href="https://www.instagram.com/fl0wermira?igsh=MXZjeTA0cnlrZWY2Mg==" target
+="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-member">
+            <img src="image/ainur.jpeg" alt="Team Member 4">
+            <div class="info">
+                <h3>Ainur</h3>
+                <p>Digital Marketer</p>
+                <div class="social-media">
+                    <a href="https://wa.me/60179177884/"_blank"> Whatsaap</a>
+                    <a href="https://www.instagram.com/nyninaaa?igsh=MTU4aXlhZDEyNzhzdg%3D%3D&utm_source=qr"_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

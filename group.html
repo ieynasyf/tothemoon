@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO THE MOON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+body{
+    margin: 0;
+    font-family: Poppins;
+}
+
+/* Header styles */
+header {
+    height: 70px; /* Adjust header height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    background-color: #17232A; /* Optional: Background color for the header */
+}
+
+/* Logo styles */
+header .logo {
+    display: flex;
+    font-size: 1.8rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: white; /* Set logo font color to white */
+    text-transform: uppercase; /* Uppercase text for logo */
+    letter-spacing: 3px; /* Add spacing between letters */
+}
+
+/* Navigation menu styles */
+header nav {
+    display: flex; /* Align items horizontally */
+    gap: 30px; /* Space between links */
+}
+
+header nav a {
+    color: white; /* Set the font color to white */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    text-transform: uppercase; /* Capitalize text */
+    font-weight: 500; /* Adjust font weight */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+header nav a:hover {
+    color: #BBBBBB; /* Change font color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+:root{
+    --width-circle: 150vw;
+    --radius: calc(100vw / 6);
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between items */
+}
+
+.item img {
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Ensure the height matches the width for a perfect circle */
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #333; /* Optional: Adds a border around the circle */
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+.item img:hover {
+    transform: scale(1.1); /* Optional: Slight zoom effect on hover */
+}
+
+.slider{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    position: relative;
+    background-color: #17232A;
+    background-image: radial-gradient(#fff3, transparent 50%);
+    margin-top: -50px;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: transform 0.8s;
+    
+}
+.slider .list .item{
+    width: calc(var(--radius) * 2);
+    text-align: center;
+    transform: rotate(45deg);
+    transition: transform 1s;
+}
+.slider .list .item.active{
+    transform: rotate(0deg);
+}
+.slider .list .item img{
+    width: 90%;
+    filter: drop-shadow(0 0 20px #000);
+}
+.slider .content{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #eee;
+    width: max-content;
+}
+.slider .content div:nth-child(2){
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: bold;
+    position: relative;
+}
+.slider .content div:nth-child(2)::before{
+    position: absolute;
+    left: 60%;
+    bottom: 50%;
+    width: 80px;
+    height: 80px;
+    content: '';
+    background-image: url(img/leaves.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slider .content div:nth-child(1){
+    text-align: left;
+    text-transform: uppercase;
+    transform: translateY(20px);
+}
+.slider .content button{
+    border: 1px solid #eee5;
+    background: transparent;
+    color: #eee;
+    font-family: Poppins;
+    letter-spacing: 5px;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+#prev,
+#next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #eee9;
+    background-color: #eee5;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 15;
+}
+#prev{
+    left: 20px;
+}
+#next{
+    right: 20px;
+}
+
+/* //circle */
+
+.circle{
+    pointer-events: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    -webkit-mask: radial-gradient(var(--radius), transparent 100%, #000);
+    mask: radial-gradient(var(--radius), #0000 98%, #000);
+    backdrop-filter: blur(10px);
+    background: radial-gradient( 
+        calc(var(--radius) + 1px), #eee5 100%, #eee2
+    );
+    
+}
+.circle span{
+    display: block;
+    position: absolute;
+    height: calc(var(--radius) * 2 + 50px);
+    top: 50%;
+    left: 50%;
+    --rotate: 50deg;
+    transform: translate(-50%, -50%) rotate(var(--rotate));
+    text-transform: uppercase;
+    color: #fff;
+    font-size: small;
+    animation: circleRotate 20s linear infinite;
+}
+@keyframes circleRotate{
+    to{
+        transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
+    }
+}
+</style>
+
+<header>
+
+
+
+    <div class="logo">
+        <span>TO THE MOON</span>
+</div>
+    <nav>
+        <a href="group.html">HOME</a>
+ 	<a href="about us.html">ABOUT US</a>
+        <a href="menu.html">MENU</a>
+        <a href="team.html">TEAM</a>
+        <a href="reviews.html">REVIEWS</a>
+        <a href="login.html">CONTACT US</a>
+    </nav>
+</header>
+
+    <div class="slider">
+
+      <div class="list">
+    <div class="item">
+        <img src="image/food1.jpeg" alt="Food 1">
+    </div>
+    <div class="item active">
+        <img src="image/food2.jpeg" alt="Food 2">
+    </div>
+    <div class="item">
+        <img src="image/food3.jpeg" alt="Food 3">
+    </div>
+    <div class="item active">
+        <img src="image/food4.jpeg" alt="Food 4">
+    </div>
+
+</div>
+        <div class="circle">
+
+        </div>
+        <div class="content">
+            <div></div>
+            <div>SPECIAL TODAY</div>
+            <a href="menu.html"><button>ORDER NOW</button>
+
+        </div>
+        <div class="arow">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+    </div>
+<audio controls autoplay>
+<source src="song.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+    <script> 
+let circle = document.querySelector('.circle');
+let slider = document.querySelector('.slider');
+let list = document.querySelector('.list');
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+let items = document.querySelectorAll('.list .item');
+let count = items.length;
+let active = 1;
+let leftTransform = 0;
+let width_item = items[active].offsetWidth;
+
+next.onclick = () => {
+    active = active >= count - 1 ? count - 1 : active + 1;
+    runCarousel();
+}
+prev.onclick = () => {
+    active = active <= 0 ? active : active - 1;
+    runCarousel();
+}
+function runCarousel() {
+    prev.style.display = (active == 0) ? 'none' : 'block';
+    next.style.display = (active == count - 1) ? 'none' : 'block';
+
+
+    let old_active = document.querySelector('.item.active');
+    if(old_active) old_active.classList.remove('active');
+    items[active].classList.add('active');
+
+     leftTransform = width_item * (active - 1) * -1;
+    list.style.transform = translateX(${leftTransform}px);
+}
+runCarousel();
+
+
+// Set Text on a Circle
+let textCircle = circle.innerText.split('');
+circle.innerText = '';
+textCircle.forEach((value, key) => {
+    let newSpan =  document.createElement("span");
+    newSpan.innerText = value;
+    let rotateThisSpan = (360 / textCircle.length) * (key + 1);
+    newSpan.style.setProperty('--rotate', rotateThisSpan + 'deg');
+    circle.appendChild(newSpan); 
+});
+    </script>
+</body>
+</html>
